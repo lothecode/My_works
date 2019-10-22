@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>攝氏/華氏換算</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <style>
+    div {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #003369;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container mt-5">
+    <form id="form">
+      <h4 class="row my-3 justify-content-center">攝氏/華氏溫度換算</h4>
+      <div class="row my-3">
+        <div class="col-3"></div>
+        <div class="col-3">
+          <input type="text" class="form-control" placeholder="Celsius" id="cel-input">
+        </div>
+        <div class="col-6 text">
+          <h5>equals to Fahrenheit degree: <span id="fah"></span>0 F</h5>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-3"></div>
+        <div class="col-3">
+          <input type="col-3 text" class="form-control" placeholder="Fahrenheit" id="fah-input">
+        </div>
+        <div class="col-6 text">
+          <h5>equals to Celsius degree: <span id="cel"></span>0 C</h5>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.querySelector('#form')
+    const formF = document.querySelector('#form-f')
+    const celInput = document.querySelector('#cel-input')
+    const fahInput = document.querySelector('#fah-input')
+    const cel = document.querySelector('#cel')
+    const fah = document.querySelector('#fah')
+
+    form.addEventListener('change', function () {
+      switch (event.target.id) {
+        case 'cel-input':
+          console.log(event.target.id)
+          let fah_a = celInput.value * (9 / 5) + 32
+          fah.innerHTML = fah_a.toFixed(1)
+          break
+
+        case 'fah-input':
+          let cel_a = (fahInput.value - 32) * 5 / 9
+          cel.innerHTML = cel_a.toFixed(1)
+          break
+      }
+    })
+  </script>
+
+</body>
+
+</html>
