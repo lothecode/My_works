@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Today events in Wikipedia</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+</body>
+
+</html>
+<main>
+
+  <div class="warpper">
+    <div class="title">
+      <img src="https://image.ibb.co/e6vOFQ/wikipedia.png" alt="Wikipedia Logo">
+      <h4>What events happened TODAY in Wikipedia</h4>
+    </div>
+    <form>
+      <span class="subline">if you are interested in some date, choose here :</span>
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <!-- month select hear -->
+      </select>
+
+      <label for="date">Date:</label>
+      <select id="date" name="date">
+        <!-- date select hear -->
+      </select>
+
+      <button type="submit" class="form-btn">Submit</button>
+    </form>
+  </div>
+  <div>
+    <h3>Events happened in history on
+      <span id="result-date"></span></h3>
+    <div class="results">
+      <!-- show events here -->
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+
+</main>
