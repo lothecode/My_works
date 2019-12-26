@@ -28,7 +28,7 @@
           <input type="text" class="form-control" placeholder="Celsius" id="cel-input">
         </div>
         <div class="col-6 text">
-          <h5>equals to Fahrenheit degree: <span id="fah"></span>0 F</h5>
+          <h5>equals to Fahrenheit degree: <span id="fah"></span> F</h5>
         </div>
       </div>
       <div class="row my-3">
@@ -37,7 +37,7 @@
           <input type="col-3 text" class="form-control" placeholder="Fahrenheit" id="fah-input">
         </div>
         <div class="col-6 text">
-          <h5>equals to Celsius degree: <span id="cel"></span>0 C</h5>
+          <h5>equals to Celsius degree: <span id="cel"></span> C</h5>
         </div>
       </div>
     </form>
@@ -56,12 +56,12 @@
         case 'cel-input':
           console.log(event.target.id)
           let fah_a = celInput.value * (9 / 5) + 32
-          fah.innerHTML = fah_a.toFixed(1)
+          fah.innerHTML = fah_a.toFixed(2)
           break
 
         case 'fah-input':
           let cel_a = (fahInput.value - 32) * 5 / 9
-          cel.innerHTML = cel_a.toFixed(1)
+          cel.innerHTML = cel_a.toFixed(2)
           break
       }
     })
