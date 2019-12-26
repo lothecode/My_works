@@ -40,7 +40,7 @@ h3 {
 }
 
 .subline {
-  font-size: 18px
+  font-size: 18px;
   padding: 2px;
 }
 
@@ -58,6 +58,7 @@ padding: 10px 0;
   font-size: 15px;
   outline: none;
 }
+
 .form-btn:hover {
     background: #333333;
 }

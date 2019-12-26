@@ -13,20 +13,18 @@ const dateSelc = document.querySelector('#date')
 const form = document.querySelector('form')
 const resultDate = document.querySelector('#result-date')
 
-function selectForm() {
-  let htmlContent = ''
-  for (i of monthNamesEn) {
-    htmlContent = `
+let htmlContent = ''
+for (i of monthNamesEn) {
+  htmlContent = `
   <option>${i}</option>
   `
-    monthSelc.innerHTML += htmlContent
-  }
-  for (let i = 1; i <= 31; i++) {
-    htmlContent =
-      `<option>${i}</option>
+  monthSelc.innerHTML += htmlContent
+}
+for (let i = 1; i <= 31; i++) {
+  htmlContent =
+    `<option>${i}</option>
   `
-    dateSelc.innerHTML += htmlContent
-  }
+  dateSelc.innerHTML += htmlContent
 }
 
 
@@ -41,14 +39,16 @@ function display(target) {
       let events = content.slice(start + sliceIndex.length, end)
       show.innerHTML = events
       resultDate.innerHTML = target
-      selectForm()
+
     })
     .catch(function (error) { console.log(error); });
 }
-display(today)
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
-  let chosen = `${monthSelc.value}_${dateSelc.value}`
+  chosen = `${monthSelc.value}_${dateSelc.value}`
+  console.log(chosen)
   display(chosen)
 })
+
+display(today)
