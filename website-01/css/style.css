@@ -1,0 +1,138 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+ul, ol{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* == Navbar == */
+
+.navbar {
+  box-shadow: 0 3px 18px rgba(0, 0, 0, .11);
+}
+
+/* == header == */
+
+.jumbotron {
+  padding: 200px 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  letter-spacing: 10px;
+}
+
+#header {
+    background-image: url('/images/007.jpg');
+    background-size: cover;
+    /* 固定背景圖 */
+    background-attachment: fixed;
+    position: relative;
+}
+
+.w-move {
+  color: yellow;
+  font-weight: bold;
+}
+.w-static {
+  color: green;
+  font-weight: bold;
+}
+
+
+.row> li{
+  display: inline-block;
+  /* padding-left: 30px; */
+  font-size: 20px;
+}
+
+/* contact */
+.contact, .works {
+    margin: 200px 0px;
+}
+.contact-form {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-form .form-input:first-child, .contact-form .form-input:nth-child(2) {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+.contact-form .form-input:nth-child(3) {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.contact-form input.form-style {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  text-transform: capitalize;
+  outline: none;
+  padding-bottom: 19px;
+  margin-bottom: 12px;
+}
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+
+}
+.form-submit {
+  text-align: left;
+  padding: 0 15px;
+}
+.form-submit input {
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 15px 60px;
+  margin: 16px 0 14px 0;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: 0.4s linear;
+}
+
+.form-submit input:hover {
+  background-color:#3b5998;
+  color: #fff;
+}
+
+
+/* static */
+
+.description>li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.work-item {
+  padding-bottom: 40px;
+  border-bottom: 1px solid blue;
+}
