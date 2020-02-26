@@ -17,66 +17,73 @@
 
 </head>
 
-<body>
-  <!-- navbar-->
-  <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">綠果創意</a>
-      <!-- 行動裝置的選單按鈕 -->
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <!-- 選項 -->
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">首頁</a>
-          </li>
-          <li class="nav-item">
-            <a href="static.html" class="nav-link">風動作品</a>
-          </li>
-          <li class="nav-item">
-            <a href="static.html" class="nav-link">靜態作品</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">聯絡我們</a>
-          </li>
-        </ul>
-      </div>
+<body class="bg-light">
+  <div class="container">
+    <!-- navbar-->
+    <div class="row">
+      <nav class="navbar col-md-8 mx-auto navbar-expand-md navbar-light bg-light ">
+        <a class="navbar-brand" href="/contact.html">Contact</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">創作集</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                (預留樣式)
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">選項1</a>
+                <a class="dropdown-item" href="#">選項2</a>
+                <a class="dropdown-item" href="#">選項3</a>
+              </div>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="/contact.html">聯絡我們</a>
+            </li> -->
+          </ul>
+
+        </div>
+      </nav>
+
+      <!-- contact form -->
+
+      <form class="col-md-8 mx-auto my-5">
+        <h1 class="text-center my-4">歡迎與我們聯絡</h1>
+        <div class="form-group">
+          <label for="name">您的姓名*</label>
+          <input type="text" class="form-control" id="name" placeholder="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email address*</label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="FormControlTextarea">訊息內容*</label>
+          <textarea class="form-control" id="FormControlTextarea" rows="3" placeholder="您的留言" required></textarea>
+        </div>
+
+        <div class="text-center">
+          <button class="btn btn-outline-secondary my-4" type="submit" name="submit" value="message">發送訊息</button></div>
+      </form>
+
     </div>
-  </nav>
-
-  <!-- contact form -->
-  <section class="contact text-center" id="contact">
-    <div class="container">
-      <h2 class="mb-5">聯絡我們</h2>
-      <div class="contact-form">
-        <form action="">
-          <div class="form-input">
-            <input type="text" name="name" class="form-style" placeholder="您的姓名*" required>
-          </div>
-          <div class="form-input">
-            <input type="email" name="email" class="form-style" placeholder="email*" required>
-          </div>
-          <div class="form-input">
-            <textarea name="textarea" id="message" cols="30" rows="10" placeholder="訊息內容*" required></textarea>
-          </div>
-          <div class="form-submit">
-            <input type="submit" name="submit" value="發送訊息">
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- footer -->
-  <div class="footer-end mt-5 py-3" style="background-color: #e3f2fd;">
-    <p class="text-center">&copy; Copy right 綠果創意 2020</p>
   </div>
 
-
+  <!-- footer -->
+  <div class="row justify-content-center mt-4 fixed-bottom" id="footer">
+    <p>©Copy Right 達克駱國際 2020</p>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
